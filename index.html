@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+
+	<body>
+
+		<h1 id="joe"></h1>
+
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
+		    authDomain: "reservations-test-1-5-17.firebaseapp.com",
+		    databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
+		    storageBucket: "reservations-test-1-5-17.appspot.com",
+		    messagingSenderId: "90870055265"
+		  };
+		  firebase.initializeApp(config);
+
+		  var item = document.getElementById('joe');
+		  var dbRef = firebase.database().ref().child('text');
+		  dbRef.on('value', snap => item.innerText = snap.val());
+
+
+		</script>
+
+	</body>
+</html>
