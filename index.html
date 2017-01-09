@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Reserve</title>
 	</head>
 
 	<body>
 
-		<h1 id="joe"></h1>
+		<h1 id="maintxtelement"></h1>
+		<h1>Reserve Now</h1>
+
+	    <form>
+	      <fieldset>
+	        <legend>My Reservation</legend>
+
+	        <p>
+	          <label>First Name</label>
+	          <input type = "text"
+	                 id = "firstName"/>
+	        </p>
+
+	        <p>
+	          <label>Last Name</label>
+	          <input type = "text"
+	                 id = "lastName"/>
+	        </p>
+
+			<p>
+	          <label>Date</label>
+	          <input type = "date"
+	                 id = "date"/>
+	        </p>
+
+	        <button type="reserve" onclick="reserve()">Reserve Now!</button>
+
+	      </fieldset>
+	    </form>
 
 
 		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
 		<script>
-		  // Initialize Firebase
-		  var config = {
-		    apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
-		    authDomain: "reservations-test-1-5-17.firebaseapp.com",
-		    databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
-		    storageBucket: "reservations-test-1-5-17.appspot.com",
-		    messagingSenderId: "90870055265"
-		  };
-		  firebase.initializeApp(config);
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
+			authDomain: "reservations-test-1-5-17.firebaseapp.com",
+			databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
+			storageBucket: "reservations-test-1-5-17.appspot.com",
+			messagingSenderId: "90870055265"
+			};
+			firebase.initializeApp(config);
 
-		  var item = document.getElementById('joe');
-		  var dbRef = firebase.database().ref().child('text');
-		  dbRef.on('value', snap => item.innerText = snap.val());
+			//var item = document.getElementById('maintxtelement');
 
+			var database = firebase.database();
 
+			function reserve(){
+				var firstName = document.getElementById('firstName').value;
+				var lastName = document.getElementById('lastName').value;
+				var date = document.getElementById('date').value;
+
+				console.log(firstName);
+				console.log(lastName);
+				console.log(date);
+				//var title = $("#post-title").text();
+	    		//var post = $("#post-content").text();
+	    		//var date = Date();
+
+	    		const dbRef = firebase.database().ref().child('text');
+				//dbRef.on('value', snap => {firstName = JSON.stringify(snap.val(), null, 3)});
 		</script>
 
 	</body>
