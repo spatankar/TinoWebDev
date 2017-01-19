@@ -2,23 +2,25 @@
 <html>
 	<head>
 		<title>FBLA Website</title>
-		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 	</head>
 
 	<body>
-		<form onSubmit="request()">
-		Name:<br>
-		<input id="username" type="text" name="name"><br>
-		E-mail:<br>
-		<input id="emailAddress" type="text" name="mail"><br>
-		Comment:<br>
-		<input id="commentText" type="text" name="comment" size="50"><br><br>
-		<input type="submit" value="Send">
-		<input type="reset" value="Reset">
+		<form>
+			Name:<br>
+			<input id="username" type="text" name="name"><br>
+			E-mail:<br>
+			<input id="emailAddress" type="text" name="mail"><br>
+			Comment:<br>
+			<input id="commentText" type="text" name="comment" size="50"><br><br>
 		</form>
+		<button id = "sendBtn">Send</button>
+			
+		
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
 		
 		<script type="text/javascript">
-		 
+		 	
 			 // Initialize Firebase
 			  var config = {
 			    apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
@@ -27,28 +29,18 @@
 			    storageBucket: "reservations-test-1-5-17.appspot.com",
 			    messagingSenderId: "90870055265"
 			  };
-			  firebase.initializeApp(config);
+			  firebase.initializeApp(config);	
 
-			  //var item = document.getElementById('joe');
-			  //dbRef.on('value', snap => item.innerText = snap.val());
-
-			  function request(){
+			  document.getElementById("sendBtn").addEventListener('click',function(){
 			  	var userID = document.getElementById('username').value;
 			  	var mailAddress = document.getElementById('emailAddress').value;
 			  	var comText = document.getElementById('commentText').value;
-			  	console.log("Name:" + userID + "  Address: " + mailAddress + "  Comment: " + comText);
-			  	post(userID, mailAddress, comText);
-			  }
-			  
-			  function post(name, mailadrs, cmnt){
-			  		var firebaseRef = firebase.database().ref();
-			  		firebaseRef.child(name).set({
-			  			username: name,
-			  			mail: mailadrs
-			  			//username: cmnt
-			  		});
-			  }
-
+			  	firebase.database().ref(userID + '/').push({
+			  		    username: userID,
+			  		    email: mailAddress,
+			  		    comment: comText
+			  	});
+			  })
 		</script>
 
 	</body>
