@@ -1,0 +1,100 @@
+<manifest alg="2" build="2015.0.0.309" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="tinowebdesigntecno.com" resolutions="1x" timestamp="1486224353296">
+  <folder name="css">
+    <file name="site_global.css" crc="123961904"/>
+    <file name="master_a-master.css" crc="293914537" ref="order-details:store-details:index:reservation-confirmation:book-now:services:check-order:packages"/>
+    <file name="order-details.css" crc="258208552" ref="order-details"/>
+    <file name="store-details.css" crc="443277746" ref="store-details"/>
+    <file name="index.css" crc="4076562196" ref="index"/>
+    <file name="reservation-confirmation.css" crc="4076703394" ref="reservation-confirmation"/>
+    <file name="book-now.css" crc="305837415" ref="book-now"/>
+    <file name="services.css" crc="1739622" ref="services"/>
+    <file name="check-order.css" crc="4193260228" ref="check-order"/>
+    <file name="packages.css" crc="3795270734" ref="packages"/>
+  </folder>
+  <folder name="assets">
+    <file name="homepage_vid.mp4" crc="3902692912" seo="true" mt="1484783062000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="4255413929" ref="index:services:packages:store-details:book-now:check-order:order-details:reservation-confirmation"/>
+    <file name="museutils.js" crc="183364071" ref="index:services:packages:store-details:book-now:check-order:order-details:reservation-confirmation"/>
+    <file name="jquery.watch.js" crc="71412426" ref="index:services:packages:store-details:book-now:check-order:order-details:reservation-confirmation"/>
+    <file name="jquery.musemenu.js" crc="3957776250" ref="index:services:packages:store-details:book-now:check-order:order-details:reservation-confirmation"/>
+    <file name="pie.js" crc="3827607177" ref="index:book-now:check-order"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4004268962" ref="index:book-now"/>
+    <file name="jquery.scrolleffects.js" crc="3860644955" ref="index"/>
+    <file name="webpro.js" crc="3803554875" ref="index:store-details:book-now:check-order"/>
+    <file name="musewpslideshow.js" crc="242596657" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="493285861" ref="index"/>
+    <file name="touchswipe.js" crc="4038331989" ref="index"/>
+    <file name="form_check.php" crc="277267350" ref="index:store-details:book-now:check-order"/>
+    <file name="form_throttle.php" crc="3908387251" ref="index:store-details:book-now:check-order"/>
+    <file name="form_process.php" crc="24249335" ref="index:store-details:book-now:check-order"/>
+    <file name="form-u521.php" crc="414819293" ref="index"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:services:packages:store-details:book-now:check-order:order-details:reservation-confirmation"/>
+    <file name="form-u1603.php" crc="3990682637" ref="store-details"/>
+    <file name="form-u2464.php" crc="208843968" ref="book-now"/>
+    <file name="form-u3118.php" crc="4019002751" ref="check-order"/>
+  </folder>
+  <folder name="images">
+    <file name="u2104-grad.png" crc="4229313802" ref="index"/>
+    <file name="tecno_logo.png" crc="219948295" seo="true" ref="index"/>
+    <file name="walk.png" crc="245899728" seo="true" ref="index"/>
+    <file name="bike.png" crc="3938620914" seo="true" ref="index"/>
+    <file name="car.png" crc="4106746460" seo="true" ref="index"/>
+    <file name="amazing-701679_1280.jpg" crc="99989210" ref="index"/>
+    <file name="sunrise-73074_640230x153.jpg" crc="116746245" seo="true" ref="index"/>
+    <file name="gobi-692640_640230x154.jpg" crc="4086346632" seo="true" ref="index"/>
+    <file name="pier-674722_640230x154.jpg" crc="4903550" seo="true" ref="index"/>
+    <file name="sky-690293_640249x140.jpg" crc="111428557" seo="true" ref="index"/>
+    <file name="sunset-675847_640230x154.jpg" crc="303622596" seo="true" ref="index"/>
+    <file name="tulip-690320_640230x153.jpg" crc="106557830" seo="true" ref="index"/>
+    <file name="landscape-411712_640230x147.jpg" crc="362176579" seo="true" ref="index"/>
+    <file name="pine-273826_640230x154.jpg" crc="521358457" seo="true" ref="index"/>
+    <file name="sunrise-73074_640.jpg" crc="4038601162" seo="true" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="gobi-692640_640.jpg" crc="4143973373" seo="true" ref="index"/>
+    <file name="pier-674722_640.jpg" crc="297570731" seo="true" ref="index"/>
+    <file name="sky-690293_640.jpg" crc="61486768" seo="true" ref="index"/>
+    <file name="sunset-675847_640.jpg" crc="111212257" seo="true" ref="index"/>
+    <file name="tulip-690320_640.jpg" crc="95684739" seo="true" ref="index"/>
+    <file name="landscape-411712_640.jpg" crc="290144159" seo="true" ref="index"/>
+    <file name="pine-273826_640.jpg" crc="3867201506" seo="true" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="u527-17.png" crc="353459160" ref="index"/>
+    <file name="u527-17-r.png" crc="3810886880" ref="index"/>
+    <file name="u527-17-m.png" crc="3810886880" ref="index"/>
+    <file name="u527-17-fs.png" crc="332647214" ref="index"/>
+    <file name="twitter.png" crc="4102706121" ref="index"/>
+    <file name="pinterest.png" crc="4214682508" ref="index"/>
+    <file name="facebook.png" crc="317936629" ref="index"/>
+    <file name="youtube.png" crc="442611654" ref="index"/>
+    <file name="instagram.png" crc="260457741" ref="index"/>
+    <file name="check.png" crc="46911136" seo="true" ref="packages"/>
+    <file name="u1618-17.png" crc="3797305821" ref="store-details"/>
+    <file name="u1618-17-r.png" crc="248139226" ref="store-details"/>
+    <file name="u1618-17-m.png" crc="3956245037" ref="store-details"/>
+    <file name="u1618-17-fs.png" crc="47624359" ref="store-details"/>
+    <file name="u2476-17.png" crc="476084521" ref="book-now"/>
+    <file name="u2476-17-r.png" crc="4116399853" ref="book-now"/>
+    <file name="u2476-17-m.png" crc="442684674" ref="book-now"/>
+    <file name="u2476-17-fs.png" crc="4092089279" ref="book-now"/>
+    <file name="radiobuttonunchecked.png" crc="232010369" ref="book-now"/>
+    <file name="radiobuttonuncheckedrollover.png" crc="173297973" ref="book-now"/>
+    <file name="radiobuttonuncheckedmousedown.png" crc="210422217" ref="book-now"/>
+    <file name="radiobuttonchecked.png" crc="424951658" ref="book-now"/>
+    <file name="radiobuttoncheckedrollover.png" crc="135556972" ref="book-now"/>
+    <file name="radiobuttoncheckedmousedown.png" crc="475385202" ref="book-now"/>
+    <file name="u3152-13.png" crc="4256591135" ref="check-order"/>
+    <file name="u3152-13-r.png" crc="3931321252" ref="check-order"/>
+    <file name="u3152-13-m.png" crc="279498337" ref="check-order"/>
+    <file name="u3152-13-fs.png" crc="4183372725" ref="check-order"/>
+  </folder>
+  <file name="index.html" crc="4289223718" seo="true" mt="1486218513428" redirect="true"/>
+  <file name="services.html" crc="295045751" seo="true" mt="1486216512987" redirect="true"/>
+  <file name="packages.html" crc="73423580" seo="true" mt="1486216512987" redirect="true"/>
+  <file name="store-details.html" crc="4202533090" seo="true" mt="1486218664995" redirect="true"/>
+  <file name="book-now.html" crc="193105322" seo="true" mt="1486218995264" redirect="true"/>
+  <file name="check-order.html" crc="134786801" seo="true" mt="1486216512987" redirect="true"/>
+  <file name="order-details.html" crc="422136505" seo="true" mt="1486216512987" redirect="true"/>
+  <file name="reservation-confirmation.html" crc="520496115" seo="true" mt="1486216988545" redirect="true"/>
+</manifest>
