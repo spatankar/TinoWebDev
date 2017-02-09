@@ -1,4 +1,4 @@
-<manifest alg="2" build="2015.0.0.309" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="tinowebdesigntecno.com" resolutions="1x" timestamp="1486224353296">
+<manifest alg="2" build="2015.0.0.309" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="tecno.paperplane.io" resolutions="1x" timestamp="1486510793032">
   <folder name="css">
     <file name="site_global.css" crc="123961904"/>
     <file name="master_a-master.css" crc="293914537" ref="order-details:store-details:index:reservation-confirmation:book-now:services:check-order:packages"/>

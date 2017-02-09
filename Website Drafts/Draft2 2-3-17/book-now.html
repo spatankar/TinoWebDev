@@ -65,7 +65,7 @@ var __adobewebfontsappname__ = "muse";
       <label class="fld-label actAsDiv clearfix grpelem" id="u2487-4" for="widgetu2486_input"><!-- content --><span class="actAsPara">Classic</span></label>
       <div class="fld-radiobutton museBGSize grpelem" id="u2489"><!-- simple frame -->
        <input class="wrapped-input" type="radio" value="Classic" spellcheck="false" id="widgetu2486_input" name="custom_U2482" tabindex="6"/>
-       <label for="widgetu2486_input"></label>
+       <label for="widgetu2486_input"></label>  
       </div>
      </div>
      <div class="fld-grp clearfix grpelem" id="widgetu2508" data-required="false" data-type="radio"><!-- none box -->
@@ -457,7 +457,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
     });
 
     //Order Total
-    //50,150,200 + 
+    //50,150,200
     var totalPrice;
     CheckIfChanged();
     function CheckIfChanged() {
@@ -472,33 +472,6 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
             CheckIfChanged();
         }, 500);
     }
-    // $('#u2893-3').focus(function() {
-    //     // turn on timer
-    //     startTimer();
-    // }).blur(function() {
-    //     // turn off timer
-    //     endTimer();
-    // });
-
-    // var lastValue = "",
-    //     $timer = $('#u2893-3'),
-    //     timerCheckCount = 0,
-    //     checkInputChange = function() {
-    //         timerCheckCount += 1;
-    //         if (lastValue !== $timer.val()) {
-    //             $timer.next().stop(true, true).fadeIn(0).html('[timer detected change (timer has fired ' + timerCheckCount + ' times!]: ' + $timer.val()).fadeOut(2000);
-    //             lastValue = $timer.val();
-    //         }
-    //     },
-    //     timer = undefined,
-    //     startTimer = function() {
-    //         timer = setInterval(checkInputChange, 200); // check input field every 200 ms (1/5 sec)
-    //     },
-    //     endTimer = function() {
-    //         clearInterval(timer);
-    //         timerCheckCount = 0;
-    // };
-
 
     //FIREBASE
     var config = {
@@ -523,7 +496,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
           var user_time = document.getElementById('u2853-3').textContent;
           var user_coupon_code = document.getElementById('widgetu2740_input').value;
 
-          firebase.database().ref(user_firstName + '/').push({
+          firebase.database().ref().push({
                 firstname: user_firstName,
                 lastname: user_lastName,
                 email: user_email,
