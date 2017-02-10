@@ -512,6 +512,20 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
                 
           });
         });
+        var reservations = [];
+
+        firebase.database().ref().once('value').then(function(snapshot){
+            snapshot.forEach(function(childSnapshot){
+              var tempDate = childSnapshot.val().date;
+              var idx = childSnapshot.val().time.indexOf(':');
+              var tempTime = parseInt(childSnapshot.val().time.substring(0, idx));
+              var tempReservation = new Date(tempDate);
+              tempReservation.setHours(tempTime);
+              reservations.push(tempReservation);
+            });
+        });
+        console.log(reservations);
+
 
 </script>
 

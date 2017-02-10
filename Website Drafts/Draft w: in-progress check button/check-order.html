@@ -140,7 +140,7 @@
                 </span>
             </div>
         </form>
-        <a class="nonblock nontext Button rounded-corners clearfix colelem" id="buttonu3284" href="order-details.html">
+        <a class="nonblock nontext Button rounded-corners clearfix colelem" id="buttonu3284">
             <!-- container box -->
             <div class="clearfix grpelem" id="u3286-4">
                 <!-- content -->
@@ -184,7 +184,6 @@
         window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
     </script>
 
-    
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -197,18 +196,25 @@
       };
       firebase.initializeApp(config);
 
-      document.getElementById('buttonu3284').addEventListener('click', function(){
-        var confCode = 'Bob';
-        var refer = firebase.database().ref(confCode);
-
-        console.log("before");
-        console.log("middle");
-        refer.once('value').then(function(snapshot){
-          console.log(snapshot.exists());
+      $('#buttonu3284').click(function(e){
+        var confCode = document.getElementById('widgetu3123_input').value.trim();
+        firebase.database().ref(confCode).once('value').then(function(snapshot){
+          if(snapshot.val() != null){
+            setCookie(confCode);
+            window.location.href = "order-details.html";
+          }else{
+            alert("That was not a valid confirmation code!");
+          }
         });
-        //refer.set({});
-        console.log("after");
       });
+
+      function setCookie(confCode){
+        var date = new Date();
+        date.setTime(date.getTime() + 100000)
+        var cookieString = "info=" + confCode + "; expires=" + date.toUTCString() + "; path=/";
+        document.cookie = cookieString;
+        //alert(document.cookie);
+      }
 
     </script>
 

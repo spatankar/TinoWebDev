@@ -242,6 +242,24 @@
     <script type="text/javascript">
         window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
     </script>
+
+    <script>
+        function getCookie() {
+            var name =  "info=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+               var c = ca[i];
+               while (c.charAt(0) == ' ') {
+                   c = c.substring(1);
+               }
+               if (c.indexOf(name) == 0) {
+                   return c.substring(name.length, c.length);                 }
+             }
+              return "";
+        }
+    </script>
+
+     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <script src="scripts/museutils.js?183364071" type="text/javascript"></script>
     <script src="scripts/jquery.musemenu.js?3957776250" type="text/javascript"></script>
     <script src="scripts/jquery.watch.js?71412426" type="text/javascript"></script>
@@ -303,10 +321,60 @@
                 if (e && 'function' == typeof e.notify) e.notify();
                 else Muse.Assert.fail('Error calling selector function:' + e);
             }
-        });
-    </script>
+           
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
+              authDomain: "reservations-test-1-5-17.firebaseapp.com",
+              databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
+              storageBucket: "reservations-test-1-5-17.appspot.com",
+              messagingSenderId: "90870055265"
+            };
+            firebase.initializeApp(config);
 
-    <script src="orderDetailUpdater.js"></script>
+            var cost, coupCode, date, email, firstName, lastName, numGuests, partyName, phone, package, time;
+
+            var confCode = getCookie();
+            var refer = firebase.database().ref(confCode);
+
+            refer.once('value').then(function(snapshot){
+              cost = snapshot.val().cost;
+              coupCode = snapshot.val().couponCode;
+              date = snapshot.val().date;
+              email = snapshot.val().email;
+              firstName = snapshot.val().firstname;
+              lastName = snapshot.val().lastname;
+              numGuests = snapshot.val().numGuests;
+              partyName = snapshot.val().partyName;
+              phone = snapshot.val().phone;
+              package = snapshot.val().pkg;
+              time = snapshot.val().time;
+              
+              //First Name
+              $('#u3257-4').html(firstName + " " + lastName);
+              //Email
+              $('#u3259-4').html(email);
+              //Phone
+              $('#u3261-4').html(phone);
+              //Party Name
+              $('#u3264-4').html(partyName);
+              //Package
+              $('#u3266-4').html(package);
+              //Guests
+              $('#u3268-4').html(numGuests);
+              //Date
+              $('#u3271-4').html(date);
+              //Time
+              $('#u3273-4').html(time);
+              //Coupon Code
+              $('#u3276-4').html(coupCode);
+              //Total
+              $('#u3278-4').html("$" + cost);
+            });
+            
+        });
+
+    </script>
 
 </body>
 
