@@ -496,7 +496,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
           var user_time = document.getElementById('u2853-3').textContent;
           var user_coupon_code = document.getElementById('widgetu2740_input').value;
 
-          firebase.database().ref().push({
+          firebase.database().ref(user_firstName).push({
                 firstname: user_firstName,
                 lastname: user_lastName,
                 email: user_email,

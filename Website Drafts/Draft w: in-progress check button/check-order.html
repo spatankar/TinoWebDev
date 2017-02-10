@@ -183,6 +183,36 @@
     <script type="text/javascript">
         window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
     </script>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
+        authDomain: "reservations-test-1-5-17.firebaseapp.com",
+        databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
+        storageBucket: "reservations-test-1-5-17.appspot.com",
+        messagingSenderId: "90870055265"
+      };
+      firebase.initializeApp(config);
+
+      document.getElementById('buttonu3284').addEventListener('click', function(){
+        var confCode = 'Bob';
+        var refer = firebase.database().ref();
+
+        console.log("before");
+        console.log("middle");
+        refer.once('value').then(function(snapshot){
+          console.log(snapshot.child(confCode).exists());
+        });
+        refer.set({});
+        console.log("after");
+      });
+
+    </script>
+
+
     <script src="scripts/museutils.js?183364071" type="text/javascript"></script>
     <script src="scripts/jquery.musemenu.js?3957776250" type="text/javascript"></script>
     <script src="scripts/webpro.js?3803554875" type="text/javascript"></script>
@@ -261,71 +291,6 @@
                 else Muse.Assert.fail('Error calling selector function:' + e);
             }
         });
-    </script>
-
-
-    //FIREBASE
-    <script src="orderDetailUpdater.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-    <script type="text/javascript">
-        //Confirmation Code widgetu3123_input
-        //CHECK Button buttonu3284
-
-        
-        var config = {
-            apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
-            authDomain: "reservations-test-1-5-17.firebaseapp.com",
-            databaseURL: "https://reservations-test-1-5-17.firebaseio.com",
-            storageBucket: "reservations-test-1-5-17.appspot.com",
-            messagingSenderId: "90870055265"
-        };
-        firebase.initializeApp(config);
-        
-
-        document.getElementById("buttonu3284").addEventListener('click', function() {
-            var confirmation_code = '-KcVZCNuNUUcxmV_TjA8';//document.getElementById('widgetu3123_input').value; //trim
-            var ref = firebase.database().ref(confirmation_code);
-
-            ref.set({}); //this is not an accident; this was needed to get firebase to work correctly
-            ref.on('value', gotData, errData);
-
-            /*ref.on('value', function(snapshot){
-              var altPhone = snapshot;
-              console.log(altPhone);
-            });*/
-          
-
-            //console.log(confirmation_code);
-            /*
-            ref.once('value').then(function(snapshot) {
-                snapshot.forEach(function(x) {
-                    console.log("hello");
-
-                });
-            });
-            */
-            //var ref = firebase.database().ref(confirmation_code);
-            //console.log(ref); 
-
-            //ref.once()
-
-            // ref.on('value', function(snap){
-            //     console.log(snap.val());
-            // });
-
-            //  
-            // });
-            //checkData.once('value', gotData, errData);
-        });
-
-        function gotData(data) {
-            console.log(data);
-        }
-
-        function errData(err) {
-            console.log("error");
-            console.log(err);
-        }
     </script>
 
 </body>
