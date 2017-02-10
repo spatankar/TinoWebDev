@@ -199,14 +199,14 @@
 
       document.getElementById('buttonu3284').addEventListener('click', function(){
         var confCode = 'Bob';
-        var refer = firebase.database().ref();
+        var refer = firebase.database().ref(confCode);
 
         console.log("before");
         console.log("middle");
         refer.once('value').then(function(snapshot){
-          console.log(snapshot.child(confCode).exists());
+          console.log(snapshot.exists());
         });
-        refer.set({});
+        //refer.set({});
         console.log("after");
       });
 
