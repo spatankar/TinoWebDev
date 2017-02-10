@@ -1,0 +1,138 @@
+#accordionu4062
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7F7F7F;
+	background-color: transparent;
+	position: relative;
+}
+
+#u4067
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u4070-4
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #DEDEDE;
+	line-height: 14px;
+	color: #999999;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+}
+
+#u4070-4:hover
+{
+	background-color: #F2F2F2;
+}
+
+#u4070-4:active
+{
+	background-color: #F2F2F2;
+}
+
+#u4070-4.AccordionPanelTabOpen
+{
+	background-color: #FFFFFF;
+}
+
+#u4070-4.AccordionPanelTabOpen p
+{
+	color: #4F4F4F;
+	visibility: inherit;
+}
+
+#u4068
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+.AccordionPanelTab /* accordion */
+{
+	cursor: pointer;
+}
+
+#u4016
+{
+	border-style: none;
+	border-color: transparent;
+	position: relative;
+	background: #29ABE2 url("../../images/twitter.png") no-repeat center center;
+}
+
+#u4016:hover
+{
+	background: #239BC6 url("../../images/twitter.png") no-repeat center center;
+}
+
+#u4020
+{
+	border-style: none;
+	border-color: transparent;
+	position: relative;
+	background: #29ABE2 url("../../images/pinterest.png") no-repeat center center;
+}
+
+#u4020:hover
+{
+	background: #239BC6 url("../../images/pinterest.png") no-repeat center center;
+}
+
+#u4017
+{
+	border-style: none;
+	border-color: transparent;
+	position: relative;
+	background: #29ABE2 url("../../images/facebook.png") no-repeat center center;
+}
+
+#u4017:hover
+{
+	background: #239BC6 url("../../images/facebook.png") no-repeat center center;
+}
+
+#u4018
+{
+	border-style: none;
+	border-color: transparent;
+	position: relative;
+	background: #29ABE2 url("../../images/youtube.png") no-repeat center center;
+}
+
+#u4018:hover
+{
+	background: #239BC6 url("../../images/youtube.png") no-repeat center center;
+}
+
+#u4019
+{
+	border-style: none;
+	border-color: transparent;
+	position: relative;
+	background: #29ABE2 url("../../images/instagram.png") no-repeat center center;
+}
+
+#u4019:hover
+{
+	background: #239BC6 url("../../images/instagram.png") no-repeat center center;
+}
+
+#u4015-4
+{
+	background-color: transparent;
+	line-height: 24px;
+	font-size: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: electrolize, sans-serif;
+	font-weight: 400;
+}
+
