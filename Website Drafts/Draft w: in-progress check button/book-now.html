@@ -40,6 +40,10 @@ var __adobewebfontsappname__ = "muse";
     </div>
    </div>
    <a class="nonblock nontext clearfix" id="u1569-4" href="index.html"><!-- content --><p><span id="u1569">TECNO</span></p></a>
+
+
+
+
    <form class="form-grp clearfix grpelem" id="widgetu2464" method="post" enctype="multipart/form-data" action="scripts/form-u2464.php"><!-- none box -->
     <div class="fld-grp clearfix grpelem" id="widgetu2465" data-required="true"><!-- none box -->
      <label class="fld-label actAsDiv clearfix grpelem" id="u2468-5" for="widgetu2465_input"><!-- content --><span class="actAsPara">Name<span id="u2468-2">*</span></span></label>
@@ -473,7 +477,10 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
         }, 500);
     }
 
+    //client ID: 90870055265-kehfevrrjbtm5utkkfqld9sg083qsbr3.apps.googleusercontent.com
+    //client secret: TF_Gu3bh41gFr9-_kcnQ8ThY
     //FIREBASE
+
     var config = {
           apiKey: "AIzaSyAjy805xy4INhpjI2oy6kOgY8u9P2vqhTM",
           authDomain: "reservations-test-1-5-17.firebaseapp.com",
@@ -525,6 +532,24 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
             });
         });
         console.log(reservations);
+
+        var resource = {
+          "summary": "Appointment",
+          "location": "Somewhere",
+          "start": {
+            "dateTime": "2011-12-16T10:00:00.000-07:00"
+          },
+          "end": {
+            "dateTime": "2011-12-16T10:25:00.000-07:00"
+          }
+        };
+        var request = gapi.client.calendar.events.insert({
+          'calendarId': 'primary',
+          'resource': resource
+        });
+        request.execute(function(resp) {
+          console.log(resp);
+        });
 
 
 </script>
